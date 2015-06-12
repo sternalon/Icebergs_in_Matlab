@@ -6,12 +6,12 @@ consider_tabular_berg_positions=0; %Checks if new tabular berg is too close to o
 consider_iceberg_positions=0; %Checks if new berg is too close to other bergs
 
 rng('default') %Initializes the random number generator
-Num_groups=0;
-Max_block_size=4;
+Num_groups=1;
+Max_block_size=3;
 block_size_x=ceil(Max_block_size*rand(Num_groups,1))+1;
 %block_size_y=5;%2.*block_size_x;
 block_size_y=ceil(Max_block_size*rand(Num_groups,1))+1;
-Num_small_bergs=1;
+Num_small_bergs=10;
 %Defining iceberg initial position manually
 just_one_line=1;
 use_gridded_icebergs=0;
@@ -196,7 +196,7 @@ if Num_bergs-Manual_bergs>0
             flag=1;
             %r_n(berg_count,1)=Lx*rand(1,1);
             r_n(berg_count,1)=Lx/2+Lx/3*rand(1,1);%Lx/3+2*Lx/3*rand(1,1);;
-            r_n(berg_count,2)=Ly/10+Lx/50*rand(1,1);;%+Ly/6*rand(1,1);%(Ly/6)+((4*Ly/6)*rand(1,1));%Ly/6*rand(1,1);
+            r_n(berg_count,2)=Ly/10+8*Lx/10*rand(1,1);;%+Ly/6*rand(1,1);%(Ly/6)+((4*Ly/6)*rand(1,1));%Ly/6*rand(1,1);
             
             %Checking if it is to near to land.
             r_up_ind=ceil((r_n(berg_count,:)/dx))+1;

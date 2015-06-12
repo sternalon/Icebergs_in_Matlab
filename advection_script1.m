@@ -1,6 +1,6 @@
 %This is a first test for making a particle advection
 clear all
-%close all
+close all
 
 global  U_w U_a U_i V_w V_a V_i eta_x eta_y Th_i T_w A_i%Environmental variables.
 global  dx dy dt Lx Ly Nx Ny%Grid variables
@@ -42,7 +42,7 @@ Rolling_icebergs=0;
 Turn_all_damping_off=0;
 use_periodic_boundaries=0;
 
-one_particle_testing=1;
+one_particle_testing=0;
 two_particle_testing=0;
 three_particle_testing=0;
 three_particle_testing2=0;
